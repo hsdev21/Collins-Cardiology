@@ -1,10 +1,8 @@
-# Valley-Radiology-UFE
+# Collins Cardiology Microsite
 
 A Gatsby website with WordPress on the back end using React Bootstrap, SASS, and CSS modules.
 
-![alt text](https://www.chrysaliswebdevelopment.com/wp-content/uploads/2021/09/Screen-Shot-2021-09-29-at-1.17.08-PM.png)
-
-See it in action here: https://valleyradiology-ufe.netlify.app
+See it in action here: TBD
 
 Run npm install and then gatsby develop to get started.
 
