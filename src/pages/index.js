@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
       <Container fluid className={homePageStyles.section2}>
         <Container className={homePageStyles.genericSection}>
           <Row className={homePageStyles.mobileReverse}>
-            <Col lg={6} className={homePageStyles.verticalCenter}>
+            <Col lg={6}>
               <h2>Why Regency Walk-In Clinic?</h2>
               <p>
                 Regency Walk-In Clinic was founded to offer high-quality,
@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => {
                 </Button>
               </p>
             </Col>
-            <Col lg={6} className={homePageStyles.verticalCenter}>
+            <Col lg={6}>
               <Img
                 className={homePageStyles.homeImg}
                 fluid={data.section2.childImageSharp.fluid}
@@ -144,7 +144,7 @@ const IndexPage = ({ data }) => {
                 for employment, school athletic programs, or other entities that
                 require basic health checks.
               </p>
-              <p className={homePageStyles.buttonBottom}>
+              <p>
                 <Button
                   variant={"primary"}
                   className={homePageStyles.mainBtn}
@@ -160,13 +160,6 @@ const IndexPage = ({ data }) => {
       <Container fluid className={homePageStyles.lightBack}>
         <Container className={homePageStyles.genericSection}>
           <Row>
-            <Col lg={6} className={homePageStyles.verticalCenter}>
-              <Img
-                className={`${homePageStyles.homeImg} ${homePageStyles.blueBorder}`}
-                fluid={data.section6.childImageSharp.fluid}
-                alt="A couple sitting together."
-              />
-            </Col>
             <Col lg={6} className={homePageStyles.verticalCenter}>
               <h2>Don’t Put Your Health on Hold.</h2>
               <p>
@@ -187,7 +180,7 @@ const IndexPage = ({ data }) => {
                 quickly and address their concerns immediately. We are also
                 happy to work with underinsured and uninsured patients.
               </p>
-              <p className={homePageStyles.buttonBottom}>
+              <p>
                 <Button
                   variant={"primary"}
                   className={homePageStyles.mainBtn}
@@ -197,20 +190,27 @@ const IndexPage = ({ data }) => {
                 </Button>
               </p>
             </Col>
+            <Col lg={6}>
+              <Img
+                className={`${homePageStyles.homeImg} ${homePageStyles.blueBorder}`}
+                fluid={data.section4.childImageSharp.fluid}
+                alt="A couple sitting together."
+              />
+            </Col>
           </Row>
         </Container>
       </Container>
       <Container fluid className={homePageStyles.lightBack}>
         <Container className={homePageStyles.genericSection}>
           <Row>
-            <Col lg={6} className={homePageStyles.verticalCenter}>
+            <Col lg={6}>
               <Img
                 className={`${homePageStyles.homeImg} ${homePageStyles.blueBorder}`}
-                fluid={data.section3.childImageSharp.fluid}
+                fluid={data.section5.childImageSharp.fluid}
                 alt="A couple sitting together."
               />
             </Col>
-            <Col lg={6} className={homePageStyles.verticalCenter}>
+            <Col lg={6}>
               <h2>Our Promise to Our Patients</h2>
               <p>Our patients always come first. </p>
               <p>
@@ -227,7 +227,7 @@ const IndexPage = ({ data }) => {
                 aftercare strategies to help you manage or overcome your medical
                 challenges effectively.
               </p>
-              <p className={homePageStyles.buttonBottom}>
+              <p>
                 <Button
                   variant={"primary"}
                   className={homePageStyles.mainBtn}
@@ -303,42 +303,14 @@ export const query = graphql`
         }
       }
     }
-    section6: file(relativePath: { eq: "section-6.jpg" }) {
+    section5: file(relativePath: { eq: "section-5.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    section7: file(relativePath: { eq: "section-7.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    aetna: file(relativePath: { eq: "aetna.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    blue: file(relativePath: { eq: "blue.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     contactSection: file(relativePath: { eq: "contact-us-bg.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    sliderImage: file(relativePath: { eq: "slider.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid

@@ -51,9 +51,9 @@ const Header = ({ data }) => {
                   variant={"primary"}
                   as={Link}
                   className={headerStyles.headerBtn}
-                  to={"/contact/"}
+                  href="tel:+1-912-384-6276"
                 >
-                  Book Online
+                  Call Now
                 </Button>
               </div>
             </div>

@@ -1,4 +1,28 @@
-$primary-color: #0E79BF;
-$brighter-primary: #00AEEF;
-$gray: #707070;
-$yellow: #C1D72F;
+$primary-color: #0e79bf;
+$brighter-primary: #00aeef;
+$gray: #606060;
+$yellow: #c1d72f;
+
+$theme-colors: (
+  light-blue: #55a3d7,
+  dark-blue: #035baa,
+  darkest-blue: #003176,
+  turquoise: #92d0c5,
+  gray: #606060,
+  dark-gray: #494949,
+  darkest-gray: #353735,
+  light-yellow: #fffeed,
+  yellow: #fcf7b4,
+);
+
+@function rem($pxval, $base: 16) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+
+  @return ($pxval / $base) * 1rem;
+}

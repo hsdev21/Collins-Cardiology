@@ -15,7 +15,7 @@ module.exports = {
     // {
     //   resolve: "gatsby-plugin-google-tagmanager",
     //   options: {
-    //     id: "GTM-5M59WPM",
+    //     id: "GTM-PL6PBWC",
     //     includeInDevelopment: true,
 
     //     // Include GTM in development.
@@ -27,7 +27,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
-    //     trackingId: "UA-60850372-4",
+    //     trackingId: "UA-69599353-2",
     //   },
     // },
     {
@@ -97,7 +97,6 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-no-index`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

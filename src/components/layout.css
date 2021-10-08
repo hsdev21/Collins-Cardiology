@@ -380,30 +380,6 @@ body.modal-open .modal-content .modal-body h3 {
   font-weight: bolder;
 }
 
-.slick-prev {
-  background-image: url("../images/slick-prev.png") !important;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  height: 42px !important;
-  width: 23px !important;
-  z-index: 1;
-}
-
-.slick-next {
-  /* background-color: #000 !important; */
-  background-image: url("../images/slick-next.png") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  height: 42px !important;
-  width: 23px !important;
-  z-index: 1;
-}
-
-.slick-next:before,
-.slick-prev:before {
-  content: "" !important;
-}
-
 .aligncenter {
   border: 1px solid #c1d72f;
   margin-bottom: 30px;

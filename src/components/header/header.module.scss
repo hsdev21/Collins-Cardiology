@@ -16,7 +16,7 @@
   }
 
   .header-right {
-    color: $primary-color;
+    color: map-get($theme-colors, gray);
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -30,7 +30,7 @@
       }
 
       a {
-        color: $primary-color;
+        color: map-get($theme-colors, gray);
         letter-spacing: 1px;
       }
 
@@ -41,21 +41,21 @@
 
     .header-btn {
       background-color: #fff;
-      border-color: #0e79bf;
+      border-color: map-get($theme-colors, gray);
       border-style: solid;
       border-width: 1px;
       border-radius: 5px;
-      color: #0e79bf;
+      color: map-get($theme-colors, gray);
       padding: 10px 45px;
       font-size: 22px;
       font-weight: normal;
-      padding: 5px 20px;
+      padding: rem(5) rem(35);
       transition: all 0.3s ease;
 
       &:hover,
       &:active,
       &:focus {
-        background-color: #0e79bf;
+        background-color: map-get($theme-colors, gray);
         color: #fff;
       }
     }

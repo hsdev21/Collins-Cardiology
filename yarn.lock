@@ -6909,11 +6909,6 @@
     "semver" "^7.3.2"
     "sharp" "^0.26.3"
 
-"gatsby-plugin-no-index@^1.0.2":
-  "integrity" "sha512-gCRkGfhBBdfEf/jc+Mos9J70FtJcM/39SjxBWpO8KpOASZEre6lsuDFnF0u8bc44VExN76GNEmpUf271LHPH3Q=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-no-index/-/gatsby-plugin-no-index-1.0.2.tgz"
-  "version" "1.0.2"
-
 "gatsby-plugin-offline@^3.2.13":
   "integrity" "sha512-MP44mQscG7V6r4WbgbO1r2e1bW9w5dnIWsZFFvqskbt/udDG5DJsilKd3JdOybtdbV0SIwIBlD7C+iVq0VHzlA=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-offline/-/gatsby-plugin-offline-3.5.0.tgz"
