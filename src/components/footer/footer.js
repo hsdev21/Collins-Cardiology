@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import footerStyles from "./footer.module.scss"
 import FooterNav from "./footer-navigaton/footer-navigation"
-import logo from "../../images/logo.png"
+import logo from "../../images/footer-logo.png"
 
 const Footer = () => (
   <footer>
@@ -19,9 +19,8 @@ const Footer = () => (
       <Row>
         <Col lg={12} className={`${footerStyles.map} text-center`}>
           <h3>
-            Telephone: <a href="tel:+1-910-486-5700">910-486-5700</a>
+            Telephone: <a href="tel:+1-912-384-6276">912.384.6276</a>
           </h3>
-          <h3>Fax: 910-486-5950</h3>
           <p>
             1400 Peterson Avenue N<br />
             Suite C<br />

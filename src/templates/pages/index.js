@@ -3,9 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import GravityForm from "../../components/gravity-form/gravity-form"
 import PageHeader from "../../components/page-header/page-header"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Button } from "react-bootstrap"
 import pageStyles from "./pageStyles.module.scss"
 import contentParser from "gatsby-wpgraphql-inline-images"
 
@@ -35,22 +34,18 @@ const Page = ({
             <div>{pageContent}</div>
           </Col>
           <Col lg={4} className={`${pageStyles.sidebar} sidebar`}>
-            <p>To Request an Appointment</p>
-            <p>
-              <span>
-                call <a href={"tel:+1-910-486-5700"}>910-486-5700</a>
-              </span>
-            </p>
-            <p style={{ marginBottom: "20px" }}>
-              <span>or Use Our Online Contact Form</span>
-            </p>
-            <GravityForm />
-            <small>
-              <em>
-                *We’ll contact you shortly to confirm an appointment time
-                convenient to your schedule.
-              </em>
-            </small>
+            <div className={pageStyles.innerSidebar}>
+              <p className={pageStyles.borderBottom}>Walk-ins Welcome</p>
+              <p className={pageStyles.borderBottom}>
+                No Appointment Necessary
+              </p>
+              <Button
+                className={pageStyles.callButton}
+                href="tel:+1-912-384-6276"
+              >
+                Call 912.384.6276
+              </Button>
+            </div>
           </Col>
         </Row>
       </Container>

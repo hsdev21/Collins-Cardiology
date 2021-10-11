@@ -1,14 +1,47 @@
+@import "../../shared/variables.scss";
+
 nav.navbar.navbar-expand-lg.navbar-light {
   #basic-navbar-nav {
     .navbar-nav {
       max-width: 1140px;
       width: 100%;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-content: space-evenly;
 
-      .dropdown.nav-item {
+      .dropdown.btn-group {
+        flex-flow: row wrap;
+
         #basic-nav-dropdown {
           color: #fff;
+        }
+        .btn-primary {
+          background: transparent;
+          border: none;
+          padding-right: 0;
+
+          @media screen and (min-width: 992px) {
+            &:first-child {
+              padding-right: initial;
+            }
+          }
+        }
+        .dropdown-toggle {
+          max-width: rem(30);
+        }
+        .dropdown-menu {
+          background: #1d4e6c;
+          border-radius: 0;
+          margin: auto !important;
+
+          @media screen and (min-width: 992px) {
+            margin: initial;
+          }
+        }
+
+        &:hover {
+          .dropdown-menu {
+            display: block !important;
+          }
         }
       }
 
@@ -16,13 +49,13 @@ nav.navbar.navbar-expand-lg.navbar-light {
         color: #fff;
         font-size: 16px;
         font-weight: bold;
-        flex-grow: 1;
+        padding: rem(10) rem(30);
         text-align: center;
         text-transform: uppercase;
 
         &:hover,
         &[aria-current="page"] {
-          background: #699a00;
+          background: #003a4c;
           color: #fff;
           font-weight: bold;
         }

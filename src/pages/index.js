@@ -4,7 +4,6 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import homePageStyles from "./index.module.scss"
-import GravityForm from "../components/gravity-form/gravity-form"
 import SEO from "../components/seo"
 import { GetHomePageMeta } from "../hooks/getHomePageMeta"
 import { graphql } from "gatsby"
@@ -19,12 +18,22 @@ const IndexPage = ({ data }) => {
     pages: { nodes },
   } = GetHomePageMeta()
   const { seo, date } = nodes[0]
+  const heroSources = [
+    {
+      ...data.mobileHero.childImageSharp.fluid,
+      media: `(max-width: 992px)`,
+    },
+    {
+      ...data.section1.childImageSharp.fluid,
+      media: `(min-width: 992px)`,
+    },
+  ]
 
   return (
     <Layout>
       <SEO seoInfo={seo} siteUrl={siteUrl} siteName={siteName} date={date} />
       <BackgroundImage
-        fluid={data.section1.childImageSharp.fluid}
+        fluid={heroSources}
         className={`${homePageStyles.section1} ${homePageStyles.genericSection}`}
         style={{
           backgroundPosition: "top",
@@ -43,18 +52,13 @@ const IndexPage = ({ data }) => {
               </p>
             </Col>
             <Col lg={6} className={homePageStyles.heroForm}>
-              <p>
-                <small>
-                  Contact Us. We're ready to help.
-                  <br />
-                  Call <a href="+1-910-486-5700">910-486-5700</a>
-                  <br />
-                  Or Use Our Online Contact Form
-                </small>
+              <p className={homePageStyles.borderBottom}>Walk-ins Welcome</p>
+              <p className={homePageStyles.borderBottom}>
+                No Appointment Necessary
               </p>
-              <div className={`${homePageStyles.gravityForm} gravityForm`}>
-                <GravityForm className={homePageStyles.gravityForm} />
-              </div>
+              <p style={{ marginBottom: "0" }}>
+                Call <a href="tel:+1-912-384-6276">912.384.6276</a>
+              </p>
             </Col>
           </Row>
         </Container>
@@ -64,7 +68,10 @@ const IndexPage = ({ data }) => {
           Same-day medical care, given with open hearts and healing hands.
         </Container>
       </Container>
-      <Container fluid className={homePageStyles.section2}>
+      <Container
+        fluid
+        className={`${homePageStyles.section2} ${homePageStyles.blueSection}`}
+      >
         <Container className={homePageStyles.genericSection}>
           <Row className={homePageStyles.mobileReverse}>
             <Col lg={6}>
@@ -157,7 +164,7 @@ const IndexPage = ({ data }) => {
           </Row>
         </Container>
       </Container>
-      <Container fluid className={homePageStyles.lightBack}>
+      <Container fluid className={homePageStyles.blueSection}>
         <Container className={homePageStyles.genericSection}>
           <Row>
             <Col lg={6} className={homePageStyles.verticalCenter}>
@@ -183,7 +190,7 @@ const IndexPage = ({ data }) => {
               <p>
                 <Button
                   variant={"primary"}
-                  className={homePageStyles.mainBtn}
+                  className={homePageStyles.secondaryBtn}
                   href="/before-you-visit/"
                 >
                   Before You Visit
@@ -251,20 +258,13 @@ const IndexPage = ({ data }) => {
               lg={{ span: 6, offset: 3 }}
               className={homePageStyles.formContainer}
             >
-              <h2>
-                Contact Us.
-                <br />
-                We're Ready to Help.
-              </h2>
-              <p className="text-center">
-                {" "}
-                Call <a href="tel:+1-912-384-6276">912-384-6276</a>
-                <br />
-                <small>Or Use Our Easy Online Form.</small>
+              <p className={homePageStyles.borderBottom}>Walk-ins Welcome</p>
+              <p className={homePageStyles.borderBottom}>
+                No Appointment Necessary
               </p>
-              <div className="gravityForm">
-                <GravityForm />
-              </div>
+              <p style={{ marginBottom: "0" }}>
+                Call <a href="tel:+1-912-384-6276">912.384.6276</a>
+              </p>
             </Col>
           </Row>
         </Container>
@@ -278,42 +278,49 @@ export const query = graphql`
     section1: file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    mobileHero: file(relativePath: { eq: "hero-mobile.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     section2: file(relativePath: { eq: "section-2.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     section3: file(relativePath: { eq: "section-3.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     section4: file(relativePath: { eq: "section-4.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     section5: file(relativePath: { eq: "section-5.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     contactSection: file(relativePath: { eq: "contact-us-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

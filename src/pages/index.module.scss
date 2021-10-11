@@ -11,15 +11,16 @@
   }
 
   img {
-    border: 1px solid #c1d72f;
+    border: 1px solid #fff;
   }
 
   .blueBorder img {
-    border: 1px solid #00aeef !important;
+    border: 1px solid #118285 !important;
   }
 
   h2 {
-    color: #000;
+    color: #1d4e6c;
+    font-family: "Helvetica Neue Medium", sans-serif;
     margin-top: 25px;
 
     @media screen and (min-width: 992px) {
@@ -73,24 +74,10 @@
 }
 
 .section1 {
-  padding: 1.4rem 0;
+  padding: 4rem 0;
 
   @media screen and (max-width: 992px) {
-    background: url(../images/hero-mobile.jpg) no-repeat !important;
-    background-size: cover !important;
-
-    &:before {
-      background: #fff;
-      background-image: unset !important;
-      content: "";
-      opacity: 0.75 !important;
-      height: 100%;
-      width: 100%;
-    }
-
-    &:after {
-      display: none !important;
-    }
+    padding-top: rem(650);
   }
 
   .row {
@@ -104,10 +91,11 @@
 
       @media screen and (min-width: 992px) {
         color: #0e79bf;
-        max-width: 450px;
+        max-width: 350px;
       }
 
       h1 {
+        color: #242e5d;
         font-family: "Helvetica Neue Medium", sans-serif;
         font-size: 32px;
         line-height: 2.7rem;
@@ -125,13 +113,23 @@
     .heroForm {
       align-content: center;
       align-self: center;
-      background: rgb(0, 117, 221);
+      background: rgb(0, 110, 112);
+      background: -moz-linear-gradient(
+        180deg,
+        rgba(0, 110, 112, 0.8) 0%,
+        rgba(6, 7, 10, 0.8) 100%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        rgba(0, 110, 112, 0.8) 0%,
+        rgba(6, 7, 10, 0.8) 100%
+      );
       background: linear-gradient(
         180deg,
-        rgba(0, 117, 221, 0.7) 0%,
-        rgba(0, 84, 158, 0.7) 53%,
-        rgba(0, 60, 113, 0.7) 100%
+        rgba(0, 110, 112, 0.8) 0%,
+        rgba(6, 7, 10, 0.8) 100%
       );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006e70",endColorstr="#06070a",GradientType=1);
       border: 1px solid #fff;
       border-radius: 10px;
       color: #fff;
@@ -139,20 +137,9 @@
       flex-direction: column;
       justify-content: center;
       margin: 0 auto 35px auto;
-      max-width: 350px;
-      padding: 25px 0;
+      max-width: rem(370);
+      padding: rem(45) rem(30);
       text-align: center;
-
-      h3 {
-        font-size: 18px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
-
-      .gravityForm {
-        padding: 0 25px;
-      }
 
       @media screen and (min-width: 992px) {
         margin: 0 0 0 auto;
@@ -160,38 +147,40 @@
 
       p {
         font-size: 20px;
-        font-weight: bold;
         text-transform: uppercase;
 
         a {
           color: #fff;
-          font-weight: bold;
         }
 
-        small {
-          text-transform: none;
+        &.borderBottom {
+          border-bottom: 1px solid #fff;
+          padding-bottom: rem(20);
         }
-      }
-
-      input {
-        border: 1px solid #fff !important;
-        border-radius: 5px;
-
-        &:hover {
-          border: 1px solid #fff !important;
-        }
-      }
-
-      button {
-        font-weight: bold;
-        width: 100%;
       }
     }
   }
 }
 
-// .section2 {
-// }
+.section2 {
+  background: #1d4e6c;
+  color: #fff;
+
+  h2,
+  p {
+    color: #fff;
+  }
+}
+
+.blueSection {
+  background: #1d4e6c;
+  color: #fff;
+
+  h2,
+  p {
+    color: #fff;
+  }
+}
 
 .insurances {
   display: grid;
@@ -249,13 +238,24 @@
 }
 
 .callOut {
-  background: rgb(0, 174, 239);
-  background: linear-gradient(
-    103deg,
-    rgba(14, 121, 191, 1) 0%,
-    rgba(0, 174, 239, 1) 100%
+  background: rgb(247, 247, 247);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(247, 247, 247, 1) 0%,
+    rgba(222, 222, 222, 1) 100%
   );
-  color: #fff;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(247, 247, 247, 1) 0%,
+    rgba(222, 222, 222, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(247, 247, 247, 1) 0%,
+    rgba(222, 222, 222, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7f7",endColorstr="#dedede",GradientType=1);
+  color: #242e5d;
   font-size: 24px;
   padding: 1em 0;
 }
@@ -268,13 +268,23 @@
   padding: 150px 0;
 
   .formContainer {
-    background: rgb(0, 117, 221);
+    background: rgb(0, 110, 112);
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 110, 112, 0.8) 0%,
+      rgba(6, 7, 10, 0.8) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 110, 112, 0.8) 0%,
+      rgba(6, 7, 10, 0.8) 100%
+    );
     background: linear-gradient(
       180deg,
-      rgba(0, 117, 221, 0.8) 0%,
-      rgba(0, 84, 158, 0.8) 53%,
-      rgba(0, 60, 113, 0.8) 100%
+      rgba(0, 110, 112, 0.8) 0%,
+      rgba(6, 7, 10, 0.8) 100%
     );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#006e70",endColorstr="#06070a",GradientType=1);
     border-radius: 10px;
     color: #fff;
     margin: auto;
@@ -292,6 +302,12 @@
     p {
       font-size: 24px;
       text-align: center;
+      text-transform: uppercase;
+
+      &.borderBottom {
+        border-bottom: 1px solid #fff;
+        padding-bottom: rem(20);
+      }
     }
 
     a {
