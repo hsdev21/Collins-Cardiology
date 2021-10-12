@@ -282,7 +282,7 @@ export const query = graphql`
         }
       }
     }
-    mobileHero: file(relativePath: { eq: "hero-mobile.jpg" }) {
+    mobileHero: file(relativePath: { eq: "hero-mobile2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
