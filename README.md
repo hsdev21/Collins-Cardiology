@@ -4,6 +4,8 @@ A Gatsby website with WordPress on the back end using React Bootstrap, SASS, and
 
 See it in action here: https://collinscardiology.netlify.app/
 
+![alt text](https://www.chrysaliswebdevelopment.com/wp-content/uploads/2021/10/Screen-Shot-2021-10-12-at-11.32.08-AM.png)
+
 Run npm install and then gatsby develop to get started.
 
 ### `gatsby develop`
