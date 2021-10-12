@@ -35,6 +35,10 @@ nav.navbar.navbar-expand-lg.navbar-light {
 
           @media screen and (min-width: 992px) {
             margin: initial;
+
+            a {
+              text-align: left;
+            }
           }
         }
 

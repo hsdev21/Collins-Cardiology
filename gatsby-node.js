@@ -17,7 +17,6 @@ exports.createPages = async function ({ actions, graphql }) {
     data: {
       wpcontent: {
         pages: { pageNodes },
-        posts: { postNodes },
       },
     },
   } = await graphql(
@@ -31,12 +30,6 @@ exports.createPages = async function ({ actions, graphql }) {
               template {
                 __typename
               }
-            }
-          }
-          posts {
-            postNodes: nodes {
-              id
-              uri
             }
           }
         }
@@ -61,13 +54,6 @@ exports.createPages = async function ({ actions, graphql }) {
           context: { ...node, pluginOptions },
         })
         break
-      case "WPGraphQL_ContactTemplate":
-        actions.createPage({
-          path: uri,
-          component: require.resolve(`./src/templates/pageContact`),
-          context: { ...node, pluginOptions },
-        })
-        break
       default:
         actions.createPage({
           path: uri,
@@ -75,13 +61,5 @@ exports.createPages = async function ({ actions, graphql }) {
           context: { ...node, pluginOptions },
         })
     }
-  })
-  postNodes.forEach(node => {
-    const uri = node.uri
-    actions.createPage({
-      path: uri,
-      component: require.resolve(`./src/templates/posts`),
-      context: { ...node, pluginOptions },
-    })
   })
 }

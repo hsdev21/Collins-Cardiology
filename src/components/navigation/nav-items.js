@@ -14,9 +14,8 @@ const NavItems = ({ navItems }) => {
           className={navigationStyles.navLink}
           open={true}
           renderMenuOnMount={true}
-          as={Link}
           href={navItem.path}
-          caret={false}
+          to={navItem.path}
         >
           {navItem.children.map((navItemChild, j) => (
             <NavDropdown.Item

@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Button } from "react-bootstrap"
 import Navigation from "../navigation/navigation"
 import headerStyles from "./header.module.scss"
 import { StaticQuery, graphql } from "gatsby"
@@ -47,14 +46,13 @@ const Header = ({ data }) => {
                     <em>Serving Patients near Douglas, Georgia</em>
                   </small>
                 </span>
-                <Button
+                <a
                   variant={"primary"}
-                  as={Link}
                   className={headerStyles.headerBtn}
-                  href="tel:+1-912-384-6276"
+                  href={"tel:+1-912-384-6276"}
                 >
                   Call Now
-                </Button>
+                </a>
               </div>
             </div>
           </div>

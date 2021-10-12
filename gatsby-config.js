@@ -47,22 +47,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-gravityforms",
-      options: {
-        // Base URL needs to include protocol (http/https)
-        baseUrl: process.env.BACKEND_URL,
-        // Gravity Forms API
-        api: {
-          key: process.env.CONSUMER_KEY,
-          secret: process.env.CONSUMER_SECRET,
-        },
-        basicAuth: {
-          user: process.env.USER,
-          password: process.env.PASSWORD,
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `WPGraphQL`,
