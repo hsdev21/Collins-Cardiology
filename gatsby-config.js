@@ -2,34 +2,34 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Collins Cardiology`,
-    description: `Collins Cardiology`,
+    title: `Regency Walk-In Clinic | Douglas, GA`,
+    description: `Regency Walk-In is proud to provide non-emergency urgent care in Douglas, GA. State-of-the-art equipment and compassionate medical care, Monday through Friday.`,
     author: `@eddieolivas`,
-    www: true,
+    www: false,
     https: true,
-    siteUrl: "https://collinscardiologymicrosite.com",
+    siteUrl: "https://regencywalkinclinic.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: "gatsby-plugin-google-tagmanager",
-    //   options: {
-    //     id: "GTM-PL6PBWC",
-    //     includeInDevelopment: true,
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.GTM_ID,
+        includeInDevelopment: true,
 
-    //     // Include GTM in development.
-    //     //
-    //     // Defaults to false meaning GTM will only be loaded in production.
-    //     defaultDataLayer: { platform: "gatsby" },
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "UA-69599353-2",
-    //   },
-    // },
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_ID,
+      },
+    },
     {
       resolve: `gatsby-plugin-catch-links`,
       options: {
