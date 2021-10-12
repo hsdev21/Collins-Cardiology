@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => {
                 <Button
                   variant={"primary"}
                   className={homePageStyles.secondaryBtn}
-                  href="tel:+1-910-486-5700"
+                  href="tel:+1-912-384-6276"
                 >
                   Call Now
                 </Button>

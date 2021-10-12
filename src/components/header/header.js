@@ -38,7 +38,7 @@ const Header = ({ data }) => {
               <div className={headerStyles.headerRight}>
                 <span>
                   Call{" "}
-                  <a className="invoca" href="tel:+1-910-486-5700">
+                  <a className="invoca" href="tel:+1-912-384-6276">
                     <strong>912-384-6276</strong>
                   </a>
                   <br />
