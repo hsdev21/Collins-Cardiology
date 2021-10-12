@@ -1,6 +1,5 @@
 [build]
-  Functions = "lambda-dist"
-  Command = "npm run build:lambda && gatsby build"
+  Command = "npm run build && gatsby build"
 [[headers]]
   for = "/*"
   [headers.values]
