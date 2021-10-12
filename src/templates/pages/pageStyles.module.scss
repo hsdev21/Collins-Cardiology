@@ -27,9 +27,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1rem;
     padding: rem(45) rem(30);
     text-align: center;
+
+    @media screen and (min-width: 992px) {
+      margin-left: 1rem;
+    }
   }
 
   @media screen and (min-width: 992px) {
