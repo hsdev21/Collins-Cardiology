@@ -170,22 +170,10 @@ const IndexPage = ({ data }) => {
             <Col lg={6} className={homePageStyles.verticalCenter}>
               <h2>Don’t Put Your Health on Hold.</h2>
               <p>
-                We recognize that seeking medical treatment for non-emergency
-                conditions can sometimes pose challenges. Many patients feel
-                that they can’t afford to take time off of work. Others have
-                childcare or family obligations that might make trips to a
-                physician difficult. Some might not have insurance and fear the
-                cost of medical treatment could be too high. However, when it
-                comes to your health, it does not pay to wait. Early care of a
-                condition can significantly reduce the time to complete healing.
+                We recognize that seeking medical treatment for non-emergency conditions can sometimes pose challenges. Many patients feel that they can’t afford to take time off of work. Others have childcare or family obligations that might make trips to a physician difficult. Some might not have insurance and fear the cost of medical treatment could be too high. However, when it comes to your health, it does not pay to wait. Early care of a condition can significantly reduce the time to complete healing.
               </p>
               <p>
-                Regency Walk-In Clinic offers ease and flexibility. Our
-                family-friendly clinic is open Monday through Friday, 8:30 a.m.
-                to 8:00 p.m., so you can visit at your convenience. We’re proud
-                of our ability to connect patients to a medical practitioner
-                quickly and address their concerns immediately. We are also
-                happy to work with underinsured and uninsured patients.
+                Regency Walk-In Clinic offers ease and flexibility. Our family-friendly clinic is open Monday through Friday, 8:30 a.m. to 5:00 p.m., so you can visit at your convenience. We’re proud of our ability to connect patients to a medical practitioner quickly and address their concerns immediately. We are also happy to work with underinsured and uninsured patients.
               </p>
               <p>
                 <Button
