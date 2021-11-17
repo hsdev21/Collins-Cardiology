@@ -229,6 +229,7 @@ const IndexPage = ({ data }) => {
                   href="/about-us/"
                 >
                   About Us
+                  {/* test */}
                 </Button>
               </p>
             </Col>
