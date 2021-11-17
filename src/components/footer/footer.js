@@ -26,7 +26,7 @@ const Footer = () => (
             Suite C<br />
             Douglas, GA 31533
             <br />
-            Monday - Friday: 8 a.m. - 5 p.m.
+            Monday - Friday: 8:30 a.m. - 5:00 p.m.
           </p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.985312140025!2d-82.85219988504483!3d31.5245633540896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f02b7810a8f7cd%3A0x56990f363a7e4cc0!2sCollins%20Cardiology!5e0!3m2!1sen!2sus!4v1633638612375!5m2!1sen!2sus"
